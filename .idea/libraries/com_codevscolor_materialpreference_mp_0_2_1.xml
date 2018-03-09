@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.codevscolor.materialpreference:mp-0.2.1">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mp-0.2.1.aar/e598e6f01e3d6c1e84b00523e6e639b2/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/mp-0.2.1.aar/e598e6f01e3d6c1e84b00523e6e639b2/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.codevscolor.materialpreference/mp/0.2.1/a03bcf9564f406069e99262595c8fad6ff8fd1fb/mp-0.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

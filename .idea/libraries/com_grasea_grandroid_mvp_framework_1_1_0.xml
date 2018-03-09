@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.grasea:grandroid-mvp-framework-1.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grandroid-mvp-framework-1.1.0.aar/45ba7cad5d8a205c19dd6df15c2b657f/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grandroid-mvp-framework-1.1.0.aar/45ba7cad5d8a205c19dd6df15c2b657f/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.grasea/grandroid-mvp-framework/1.1.0/2e8122e842cac6662c6b591ce870be6defd174ac/grandroid-mvp-framework-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

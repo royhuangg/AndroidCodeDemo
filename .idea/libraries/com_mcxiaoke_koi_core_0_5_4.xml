@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.mcxiaoke.koi:core-0.5.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-0.5.4.aar/fb98b561aaf5350d857a997b8b7d438e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-0.5.4.aar/fb98b561aaf5350d857a997b8b7d438e/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.koi/core/0.5.4/3ce95526425ea9400ce276a6e8374de7b7eedd88/core-0.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

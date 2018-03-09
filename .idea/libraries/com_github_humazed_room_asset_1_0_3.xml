@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.github.humazed:room-asset-1.0.3">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/room-asset-1.0.3.aar/f30c19631c92946e2a76a5dcc43b05b9/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/room-asset-1.0.3.aar/f30c19631c92946e2a76a5dcc43b05b9/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.humazed/room-asset/1.0.3/f04dd1b9de1c778a4125160597125ed3bb628156/room-asset-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
