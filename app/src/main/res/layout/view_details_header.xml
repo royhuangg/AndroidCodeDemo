@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000">
+
+    <RelativeLayout
+        android:id="@+id/btnHeaderFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingRight="@dimen/padding_8"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:src="@drawable/selector_collect" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_favorite_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_favorite"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btn_favorite"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_favorite_status"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text_favorite_count"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/colorLineGrey"></View>
+
+    <RelativeLayout
+        android:id="@+id/btnHeaderCheckIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingRight="@dimen/padding_8"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_check_in"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:src="@drawable/selector_pin" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_check_in_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_check_in"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btn_check_in"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_check_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_check_in_status"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text_check_in_count"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/colorLineGrey"></View>
+
+    <RelativeLayout
+        android:id="@+id/btnHeaderRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingRight="@dimen/padding_8"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_ratting"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:src="@drawable/selector_star_coffee" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rating_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_ratting"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btn_rate"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rating_status"
+            android:layout_centerHorizontal="true"
+            tools:text="@string/text_rate_count"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/colorLineGrey"></View>
+
+    <RelativeLayout
+        android:id="@+id/btnHeaderReview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:paddingLeft="@dimen/padding_8"
+        android:paddingRight="@dimen/padding_8"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/iv_review"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/padding_4"
+            android:src="@drawable/selector_comment" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_review_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_review"
+            android:layout_centerHorizontal="true"
+            android:text="@string/btn_review"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="10sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_review_status"
+            android:layout_centerHorizontal="true"
+            android:text="@string/text_review_count"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="10sp" />
+
+
+    </RelativeLayout>
+</LinearLayout>

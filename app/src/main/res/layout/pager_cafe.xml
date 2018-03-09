@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:paddingBottom="@dimen/padding_16"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_4">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="match_parent"
+            android:layout_height="94dp"
+            style="@style/CardView.Light"
+            app:cardUseCompatPadding="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:paddingTop="@dimen/padding_8">
+
+                <ImageView
+                    android:id="@+id/iv_cafe"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_centerVertical="true"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_cafe_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_toEndOf="@+id/iv_cafe"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="14sp"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:layout_marginEnd="48dp"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="決呂咖啡"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/iv_cafe" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_store_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tv_cafe_name"
+                    android:layout_below="@+id/tv_cafe_name"
+                    android:layout_marginTop="0dp"
+                    android:drawablePadding="@dimen/padding_4"
+                    android:drawableStart="@drawable/selector_circle_opentime"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorTextGrey_3"
+                    android:textSize="12sp"
+                    tools:text="@string/text_open"
+                    android:layout_alignLeft="@+id/tv_cafe_name"
+                    android:drawableLeft="@drawable/selector_circle_opentime" />
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_cafe_name"
+                    android:layout_marginStart="4dp"
+                    android:layout_toEndOf="@+id/tv_store_status"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:includeFontPadding="false"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="@color/colorTextGrey_3"
+                    android:textSize="12sp"
+                    tools:text="11:00-22:00"
+                    android:layout_marginLeft="4dp"
+                    android:layout_toRightOf="@+id/tv_store_status" />
+
+
+                <android.support.v7.widget.LinearLayoutCompat
+                    android:id="@+id/linearLayoutCompat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="36dp"
+                    android:layout_alignStart="@+id/tv_cafe_name"
+                    android:layout_below="@+id/tv_store_status"
+                    android:gravity="center_vertical"
+                    android:layout_alignLeft="@+id/tv_cafe_name">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tv_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="20sp"
+                        tools:text="200M"
+                        />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <tw.yalan.cafeoffice.views.TagView
+                        android:id="@+id/tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/linearLayoutCompat"
+                        android:layout_marginStart="@dimen/padding_16"
+                        android:layout_toEndOf="@+id/tv_cafe_name"
+                        android:visibility="gone"
+                        app:tagTextSize="12sp"
+                        tools:visibility="visible"
+                        tools:tagText="店員很正"
+                        android:layout_marginLeft="@dimen/padding_16"
+                        android:layout_toRightOf="@+id/tv_cafe_name" />
+
+                    <tw.yalan.cafeoffice.views.TagView
+                        android:id="@+id/tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/linearLayoutCompat"
+                        android:layout_toEndOf="@+id/tv_cafe_name"
+                        android:visibility="gone"
+                        app:tagTextSize="12sp"
+                        tools:visibility="visible"
+                        tools:tagText="店員很正"
+                        android:layout_toRightOf="@+id/tv_cafe_name" />
+
+                    <tw.yalan.cafeoffice.views.TagView
+                        android:id="@+id/tag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/linearLayoutCompat"
+                        android:layout_toEndOf="@+id/tv_cafe_name"
+                        android:visibility="gone"
+                        app:tagTextSize="12sp"
+                        tools:visibility="visible"
+                        tools:tagText="店員很正"
+                        android:layout_toRightOf="@+id/tv_cafe_name" />
+                </android.support.v7.widget.LinearLayoutCompat>
+
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_rating_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_color_dark"
+        android:paddingBottom="3dp"
+        android:paddingLeft="@dimen/padding_4"
+        android:paddingRight="@dimen/padding_4"
+        android:paddingTop="3dp"
+        android:textColor="@color/md_white_1000"
+        tools:text="4.3"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp" />
+
+</RelativeLayout>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/store_open_time_bg"
+                android:paddingBottom="@dimen/padding_16"
+                android:paddingLeft="@dimen/padding_24"
+                android:paddingRight="@dimen/padding_24">
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:ellipsize="end"
+        android:fontFamily="@string/font_system_roboto_medium"
+        android:maxLines="1"
+        android:paddingRight="@dimen/padding_16"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:text="Sit Down Plz"/>
+
+    <TextView
+        android:id="@+id/tv_store_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="5dp"
+        android:drawableLeft="@drawable/selector_circle_opentime"
+        android:drawablePadding="@dimen/padding_4"
+        android:gravity="center_vertical"
+        android:textColor="@color/store_status_color"
+        android:textSize="12sp"
+        tools:enabled="false"
+        tools:text="@string/text_open"/>
+
+    <LinearLayout
+        android:id="@+id/layout_times"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_store_status"
+        android:layout_marginTop="@dimen/padding_24"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/row1"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row2"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row3"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row4"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row5"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row6"
+            layout="@layout/row_store_open_time"></include>
+
+        <include
+            android:id="@+id/row7"
+            layout="@layout/row_store_open_time"></include>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*營業資訊以店家官網最新公布為準"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/tv_close"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_times"
+        android:layout_marginTop="@dimen/padding_8"
+        android:layout_toLeftOf="@+id/tv_navigation"
+        android:text="@string/btn_keep_search"
+        android:textSize="14sp"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/tv_navigation"
+        style="?attr/buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/padding_8"
+        android:layout_below="@id/layout_times"
+        android:text="@string/navigation_on_map"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp"/>
+</RelativeLayout>

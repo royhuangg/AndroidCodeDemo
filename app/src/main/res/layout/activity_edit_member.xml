@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context="tw.yalan.cafeoffice.activitys.member.EditMemberActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:contentInsetEnd="0dp"
+        android:contentInsetLeft="0dp"
+        android:contentInsetRight="0dp"
+        android:contentInsetStart="0dp"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/title_member_edit">
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/itemChangeAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivUserPhoto"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:failureImage="@drawable/default_avator"
+                fresco:placeholderImage="@drawable/loading"
+                fresco:retryImage="@drawable/retry"
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundingBorderColor="@color/md_white_1000"
+                fresco:roundingBorderWidth="0dp"
+                tools:background="@drawable/loading" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_change_avatar"
+                android:textSize="14sp"
+                android:fontFamily="@font/notosanscjktc_medium"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="13.4dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_name"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjktc_medium" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:maxLength="24"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:text="Yalan Ding" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="13.4dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_email"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjktc_medium" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="text|textEmailAddress"
+                android:maxLength="24"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:text="yalandingtw@gmail.com" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="13.4dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_area"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjktc_medium" />
+
+            <EditText
+                android:id="@+id/etArea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:maxLength="6"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:text="台北市" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/padding_16"
+            android:paddingRight="@dimen/padding_16"
+            android:paddingTop="13.4dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_user_intro"
+                android:textSize="12sp"
+                android:fontFamily="@font/notosanscjktc_medium" />
+
+            <EditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:inputType="text"
+                android:maxLength="30"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textSize="16sp"
+                tools:hint="@string/hint_user_intro"
+                tools:text="我家門前有小河，後面有山坡" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginLeft="@dimen/padding_8"
+            android:layout_marginRight="@dimen/padding_8"
+            android:layout_marginTop="@dimen/padding_8"
+            android:text="@string/btn_save_setting"
+            android:textColor="@color/md_white_1000"
+            android:includeFontPadding="false"
+            android:layout_marginBottom="@dimen/padding_8"
+            android:textSize="14sp"
+            android:background="@drawable/button_color_dark" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorInnerShadow"></View>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,252 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.objectbox'
+//apply plugin: 'io.balto'
+//apply plugin: 'me.tatarka.retrolambda'
+//apply plugin: 'org.greenrobot.greendao'
+apply from: "$project.rootDir/tools/script-lint.gradle"
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    signingConfigs {
+        release {         //TODO DEMO 拿掉
+            Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            def password = properties.getProperty("keystore.password")
+            def alias = properties.getProperty("keystore.alias")
+            storeFile rootProject.file('cafeoffice.jks')
+            keyAlias "${alias}"
+            keyPassword "${password}"
+            storePassword "${password}"
+        }
+    }
+    defaultConfig {
+        applicationId "tw.Demo"
+        minSdkVersion 17
+        targetSdkVersion 26
+        versionCode 21
+        versionName "1.0.7"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schemas".toString()]
+            }
+        }
+    }
+
+    if (project.hasProperty('devBuild')) {
+        splits.abi.enable = false
+        splits.density.enable = false
+        aaptOptions.cruncherEnabled = false
+    }
+
+    flavorDimensions("serversite")
+
+    productFlavors {
+        dev {
+            dimension "serversite"
+            buildConfigField 'String', 'TAG', '"Demo"'
+            buildConfigField 'String', 'API_URL', '"https://Demo.tw/api/"'
+            buildConfigField 'String', 'API_VER', '"1.2"'
+            buildConfigField 'String', 'API_URL_SELF', '"http://35.201.206.7/api/"'
+            buildConfigField 'String', 'API_VER_SELF', '"2"'
+        }
+        product {
+            dimension "serversite"
+            buildConfigField 'String', 'TAG', '"Demo"'
+            buildConfigField 'String', 'API_URL', '"https://Demo.tw/api/"'
+            buildConfigField 'String', 'API_VER', '"1.2"'
+            buildConfigField 'String', 'API_URL_SELF', '"https://api.Demo.tw/api/"'
+            buildConfigField 'String', 'API_VER_SELF', '"2"'
+        }
+    }
+
+    buildTypes {
+        debug {
+            debuggable true
+            multiDexEnabled true
+        }
+        release {
+            minifyEnabled false
+            multiDexEnabled true
+            signingConfig signingConfigs.release         //TODO DEMO 拿掉
+            proguardFiles getDefaultProguardFile('proguard-defaults.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+    }
+    kapt {
+        generateStubs = true
+        correctErrorTypes = true
+    }
+//    baltoUpload {
+//        // require
+//        Properties properties = new Properties()
+//        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//        def ut = properties.getProperty("balto.usertoken")
+//        def pt = properties.getProperty("balto.projecttoken")
+//        userToken = ut
+//        projectToken = pt
+//        // options
+//        releaseNote = "1. 修正從列表切換回地圖時Marker會消失 \n2. 完善Filter機制\n3. 關於我們更改UI\n4. Level機制隱藏" +
+//                "\n5. 編輯資料功能修復\n6. 點擊搜尋結果直接轉到Detail頁面 ..其餘待補"
+//        readyForReview = true
+//    }
+}
+androidExtensions {
+    experimental = true
+}
+project.android.buildTypes.all { buildType ->
+    buildType.javaCompileOptions.annotationProcessorOptions.arguments =
+            [
+                    // Validation is disabled in production to remove the runtime overhead
+                    validateEpoxyModelUsage     : String.valueOf(buildType.name == 'debug'),
+                    requireHashCodeInEpoxyModels: "true",
+                    requireAbstractEpoxyModels  : "true",
+                    implicitlyAddAutoModels     : "true"
+            ]
+}
+//hugo {
+//    enabled true
+//}
+def supportVersion = '26.1.0'
+def googleServiceVersion = '11.0.4'
+def firebaseVersion = '11.0.4'
+def uploadServiceVersion = "3.3.1"
+def debugDBVersion = '1.0.1'
+def epoxyVersion = '2.7.3'
+
+configurations.all {
+    resolutionStrategy {
+        force 'com.android.support:support-annotations:' + supportVersion
+        force 'com.android.support:support-v4:' + supportVersion
+        force 'com.android.support:appcompact-v7:' + supportVersion
+        force 'com.android.support:design:' + supportVersion
+        force 'com.android.support:recyclerview-v7:' + supportVersion
+        force 'com.yalantis:ucrop:2.2.0-native'
+
+    }
+}
+dependencies {
+    implementation "com.google.firebase:firebase-messaging:$firebaseVersion"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:multidex:1.0.2'
+
+    implementation 'com.android.support:appcompat-v7:' + supportVersion
+    implementation 'com.android.support:design:' + supportVersion
+    implementation 'com.android.support:preference-v7:' + supportVersion
+    implementation 'com.android.support:support-v4:' + supportVersion
+
+    compile('com.grasea:grandroid-mvp-framework:1.1.0', {
+        exclude group: 'com.grasea', module: 'grandroid-core'
+        exclude group: 'com.android.support', module: 'support-v4'
+        exclude group: 'com.android.support', module: 'appcompat-v7'
+        exclude group: 'com.android.support', module: 'design'
+    })
+
+    implementation "com.google.android.gms:play-services-maps:$googleServiceVersion"
+    implementation "com.google.android.gms:play-services-location:$googleServiceVersion"
+    implementation "com.google.android.gms:play-services-places:$googleServiceVersion"
+    implementation "com.google.firebase:firebase-database:$firebaseVersion"
+    implementation "com.google.firebase:firebase-ads:$firebaseVersion"
+    implementation "com.google.firebase:firebase-core:$firebaseVersion"
+    implementation "com.google.firebase:firebase-auth:$firebaseVersion"
+
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.grasea:grandroid-core:1.0.8'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    implementation 'jp.wasabeef:picasso-transformations:2.1.2'
+    implementation 'com.jakewharton.picasso:picasso2-okhttp3-downloader:1.1.0'
+    implementation 'com.facebook.fresco:fresco:1.2.0'
+    implementation 'biz.kasual:materialnumberpicker:1.2.1'
+    implementation 'com.getbase:floatingactionbutton:1.10.1'
+    implementation 'org.adw.library:discrete-seekbar:1.0.1'
+    implementation 'com.github.devlight.shadowlayout:library:1.0.2'
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.easing:library:1.0.1@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.3@aar'
+    implementation 'com.codevscolor.materialpreference:mp:0.2.1'
+
+    implementation "android.arch.lifecycle:runtime:1.0.0"
+    implementation "android.arch.lifecycle:common-java8:1.0.0-beta1"
+    implementation "android.arch.lifecycle:extensions:1.0.0-beta1"
+    kapt "android.arch.lifecycle:compiler:1.0.0-beta1" // not needed if you are using the DefaultLifecycleObserver from common-java8 artifact.
+
+    //Room
+    implementation "android.arch.persistence.room:runtime:1.0.0-beta1"
+    kapt "android.arch.persistence.room:compiler:1.0.0-beta1"
+    implementation "android.arch.persistence.room:rxjava2:1.0.0-beta1"
+
+    implementation 'com.github.humazed:room-asset:1.0.3'
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+
+    compile "io.objectbox:objectbox-android:$objectboxVersion"
+    compile "io.objectbox:objectbox-kotlin:$objectboxVersion"
+    kapt "io.objectbox:objectbox-processor:$objectboxVersion"
+
+    implementation 'com.github.iwgang:simplifyspan:2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation 'com.facebook.android:facebook-android-sdk:4.27.0'
+    implementation 'com.hannesdorfmann.smoothprogressbar:library:1.0.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.2'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'com.amplitude:android-sdk:2.12.0'
+    implementation 'com.google.android:flexbox:0.3.0'
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+    testCompile 'junit:junit:4.12'
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    kapt 'com.jakewharton:butterknife-compiler:8.6.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation 'com.facebook.shimmer:shimmer:0.1.0@aar'
+    implementation 'com.mcxiaoke.koi:core:0.5.4'
+    implementation('com.github.chrisbanes:PhotoView:2.1.3')
+    implementation('com.github.LuckSiege.PictureSelector:picture_library:v2.1.1')
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-support-v4:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-appcompat-v7:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-design:2.0.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding-recyclerview-v7:2.0.0'
+    implementation 'me.relex:circleindicator:1.2.2@aar'
+    implementation "net.gotev:uploadservice:$uploadServiceVersion"
+    implementation "net.gotev:uploadservice-okhttp:$uploadServiceVersion"
+    //Epoxy
+    api "com.airbnb.android:epoxy:$epoxyVersion"
+    kapt "com.airbnb.android:epoxy-processor:$epoxyVersion"
+    debugCompile "com.amitshekhar.android:debug-db:$debugDBVersion"
+
+//    debugCompile 'io.balto:balto-sdk:2.1.2'
+    implementation('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+    maven { url 'https://maven.fabric.io/public' }
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/previewBackground"
+    android:background="@color/md_black_1000">
+
+    <tw.yalan.cafeoffice.views.HackyViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@+id/layout_top_bar"
+        android:layout_marginBottom="@dimen/padding_32"
+        android:layout_marginTop="@dimen/padding_32" />
+
+    <LinearLayout
+        android:id="@+id/layout_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow_top"
+        android:gravity="center_vertical"
+        android:visibility="visible"
+        android:paddingTop="@dimen/padding_16"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:padding="8dp"
+            android:src="@drawable/ic_white_arrow_back" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:textColor="@color/md_white_1000"
+            android:textSize="20sp"
+            tools:text="決呂咖啡" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="32dp">
+
+        <TextView
+            android:id="@+id/tvIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:text="0 of 0"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

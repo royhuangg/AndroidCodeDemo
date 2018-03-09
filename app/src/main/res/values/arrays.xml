@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer-array name="menu_icons">
+        <item>@drawable/taipei_2</item>
+        <item>@drawable/taitung</item>
+        <item>@drawable/taichung</item>
+        <item>@drawable/pingtung</item>
+        <item>@drawable/taipei_2</item>
+        <item>@drawable/coffee_side</item>
+        <item>@drawable/msg</item>
+        <item>@drawable/fanpage</item>
+        <item>@drawable/rate_light</item>
+        <item>@drawable/setting</item>
+    </integer-array>
+    <string-array name="citys">
+        <item>@string/sub_menu_0_tw</item>
+        <item>@string/sub_menu_1_tw</item>
+        <item>@string/sub_menu_2_tw</item>
+        <item>@string/sub_menu_3_tw</item>
+        <item>@string/sub_menu_4_tw</item>
+        <item>@string/sub_menu_5_tw</item>
+        <item>@string/sub_menu_6_tw</item>
+        <item>@string/sub_menu_7_tw</item>
+        <item>@string/sub_menu_8_tw</item>
+        <item>@string/sub_menu_9_tw</item>
+        <item>@string/sub_menu_10_tw</item>
+        <item>@string/sub_menu_11_tw</item>
+        <item>@string/sub_menu_12_tw</item>
+        <item>@string/sub_menu_13_tw</item>
+        <item>@string/sub_menu_14_tw</item>
+        <item>@string/sub_menu_15_tw</item>
+        <item>@string/sub_menu_16_tw</item>
+        <item>@string/sub_menu_17_tw</item>
+        <item>@string/sub_menu_18_tw</item>
+        <item>@string/sub_menu_19_tw</item>
+
+    </string-array>
+    <string-array name="prices">
+        <item>@string/no_set</item>
+        <item>@string/price_100</item>
+        <item>@string/price_200</item>
+        <item>@string/price_300</item>
+        <item>@string/price_400</item>
+    </string-array>
+    <string-array name="menu_items">
+        <item>@string/menu_0_tw</item>
+        <item>@string/menu_1_tw</item>
+        <item>@string/menu_2_tw</item>
+        <item>@string/menu_3_tw</item>
+        <item>@string/menu_4_tw</item>
+        <item>@string/menu_about_us</item>
+        <item>@string/menu_contact_us</item>
+        <item>@string/menu_fanpage</item>
+        <item>@string/menu_rate_us</item>
+        <item>@string/title_setting</item>
+    </string-array>
+    <string-array name="sub_menu_items_other_country">
+        <item>@string/sub_menu_17_tw</item>
+        <item>@string/sub_menu_18_tw</item>
+        <item>@string/sub_menu_19_tw</item>
+    </string-array>
+    <string-array name="sub_menu_items_n">
+        <item>@string/sub_menu_0_tw</item>
+        <item>@string/sub_menu_1_tw</item>
+        <item>@string/sub_menu_2_tw</item>
+        <item>@string/sub_menu_3_tw</item>
+    </string-array>
+    <string-array name="sub_menu_items_e">
+        <item>@string/sub_menu_8_tw</item>
+        <item>@string/sub_menu_12_tw</item>
+        <item>@string/sub_menu_9_tw</item>
+        <item>@string/sub_menu_11_tw</item>
+    </string-array>
+    <string-array name="sub_menu_items_c">
+        <item>@string/sub_menu_10_tw</item>
+        <item>@string/sub_menu_4_tw</item>
+        <item>@string/sub_menu_13_tw</item>
+        <item>@string/sub_menu_14_tw</item>
+        <item>@string/sub_menu_15_tw</item>
+    </string-array>
+    <string-array name="sub_menu_items_s">
+        <item>@string/sub_menu_16_tw</item>
+        <item>@string/sub_menu_5_tw</item>
+        <item>@string/sub_menu_6_tw</item>
+        <item>@string/sub_menu_7_tw</item>
+    </string-array>
+
+    <string-array name="sub_menu_items_other_country_en">
+        <item>@string/sub_menu_17_en</item>
+        <item>@string/sub_menu_18_en</item>
+        <item>@string/sub_menu_19_en</item>
+    </string-array>
+    <string-array name="sub_menu_items_n_en">
+        <item>@string/sub_menu_0_en</item>
+        <item>@string/sub_menu_1_en</item>
+        <item>@string/sub_menu_2_en</item>
+        <item>@string/sub_menu_3_en</item>
+    </string-array>
+    <string-array name="sub_menu_items_e_en">
+        <item>@string/sub_menu_8_en</item>
+        <item>@string/sub_menu_12_en</item>
+        <item>@string/sub_menu_9_en</item>
+        <item>@string/sub_menu_11_en</item>
+    </string-array>
+    <string-array name="sub_menu_items_c_en">
+        <item>@string/sub_menu_10_en</item>
+        <item>@string/sub_menu_4_en</item>
+        <item>@string/sub_menu_13_en</item>
+        <item>@string/sub_menu_14_en</item>
+        <item>@string/sub_menu_15_en</item>
+    </string-array>
+    <string-array name="sub_menu_items_s_en">
+        <item>@string/sub_menu_16_en</item>
+        <item>@string/sub_menu_5_en</item>
+        <item>@string/sub_menu_6_en</item>
+        <item>@string/sub_menu_7_en</item>
+    </string-array>
+    <string-array name="day_of_week">
+        <item>@string/sunday</item>
+        <item>@string/monday</item>
+        <item>@string/tuesday</item>
+        <item>@string/wednesday</item>
+        <item>@string/thursday</item>
+        <item>@string/friday</item>
+        <item>@string/saturday</item>
+    </string-array>
+    <string-array name="filter_item">
+        <item>@string/filter_0</item>
+        <item>@string/filter_1</item>
+        <item>@string/filter_2</item>
+        <item>@string/filter_3</item>
+        <item>@string/filter_4</item>
+        <item>@string/filter_5</item>
+        <item>@string/filter_6</item>
+    </string-array>
+
+    <integer-array name="filter_icon_item">
+        <item>@drawable/wifi</item>
+        <item>@drawable/quiet</item>
+        <item>@drawable/money</item>
+        <item>@drawable/seat</item>
+        <item>@drawable/cup</item>
+        <item>@drawable/food</item>
+        <item>@drawable/pic</item>
+    </integer-array>
+
+    <!--FAST FILTER-->
+    <integer-array name="fast_filter_text_color">
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/colorPrimaryDark</item>
+        <item>@color/md_white_1000</item>
+    </integer-array>
+
+    <integer-array name="fast_filter_bg_item">
+        <item>@drawable/selector_fast_filter</item>
+        <item>@drawable/selector_fast_filter</item>
+        <item>@drawable/selector_fast_filter</item>
+        <item>@drawable/selector_fast_filter</item>
+        <item>@drawable/selector_fast_filter</item>
+        <item>@drawable/button_color_dark</item>
+    </integer-array>
+    <integer-array name="fast_filter_icon_item">
+        <item>@drawable/wifi</item>
+        <item>@drawable/socket</item>
+        <item>@drawable/clock</item>
+        <item>@drawable/door</item>
+        <item>@drawable/pin_2</item>
+        <item>0</item>
+    </integer-array>
+
+    <string-array name="fast_filter_item">
+        <item>@string/fast_filter_1</item>
+        <item>@string/fast_filter_2</item>
+        <item>@string/fast_filter_3</item>
+        <item>@string/fast_filter_4</item>
+        <item>@string/fast_filter_5</item>
+        <item>@string/fast_filter_6</item>
+    </string-array>
+
+    <string-array name="filter_item_1">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_normal</item>
+        <item>@string/filter_tab_fast</item>
+    </string-array>
+
+    <string-array name="filter_item_2">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_normal</item>
+        <item>@string/filter_tab_quiet</item>
+    </string-array>
+    <string-array name="filter_item_3">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_normal</item>
+        <item>@string/filter_tab_cheap</item>
+    </string-array>
+    <string-array name="filter_item_4">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_normal</item>
+        <item>@string/filter_tab_more</item>
+    </string-array>
+
+    <string-array name="filter_item_5">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_soso</item>
+        <item>@string/filter_tab_good</item>
+    </string-array>
+
+    <string-array name="filter_item_6">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_soso</item>
+        <item>@string/filter_tab_tasty</item>
+    </string-array>
+    <string-array name="filter_item_7">
+        <item>@string/filter_tab_nothing</item>
+        <item>@string/filter_tab_soso</item>
+        <item>@string/filter_tab_comfortable</item>
+    </string-array>
+    <string-array name="member_tabs_item">
+        <item>@string/member_tab_1</item>
+        <item>@string/member_tab_2</item>
+        <item>@string/member_tab_3</item>
+        <item>@string/member_tab_4</item>
+    </string-array>
+    <string name="menu_0_tw">北部</string>
+    <string name="menu_1_tw">東部</string>
+    <string name="menu_2_tw">中部</string>
+    <string name="menu_3_tw">南部</string>
+    <string name="menu_4_tw">其他國家</string>
+    <string name="no_set">不設定</string>
+
+
+</resources>

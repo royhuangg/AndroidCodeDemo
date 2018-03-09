@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="296dp"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_16">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:includeFontPadding="false"
+            android:text="請勾選/調整店家的營業時間"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/btnRestore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/padding_4"
+            android:paddingTop="3dp"
+            android:text="@string/text_restore"
+            android:textColor="@color/colorTextGrey_5"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbMonday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_2"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvMondayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvMondayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvMondayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvMondayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvMondayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbTuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_3"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTuesdayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvTuesdayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvTuesdayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvTuesdayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvTuesdayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbWednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvWednesdayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvWednesdayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvWednesdayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvWednesdayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvWednesdayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbThursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_4"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvThursdayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvThursdayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvThursdayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvThursdayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvThursdayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbFriday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_6"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvFridayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvFridayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvFridayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvFridayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvFridayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbSaturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_7"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSaturdayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvSaturdayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSaturdayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvSaturdayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSaturdayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:layout_marginLeft="@dimen/padding_12"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/day_of_week_1"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSundayStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvSundayTo"
+                    android:textColor="@color/colorTextBlack"
+                    android:text="08:00"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvSundayTo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/tvSundayEnd"
+                    android:paddingLeft="@dimen/padding_8"
+                    android:paddingRight="@dimen/padding_8"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/text_to"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvSundayEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorTextBlack"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/padding_8"
+                    android:background="@drawable/under_line_bg"
+                    android:layout_centerVertical="true"
+                    android:text="20:00"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_btn_cancel"
+            android:textColor="@color/colorTextGrey_4"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSent"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_confirm_send"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

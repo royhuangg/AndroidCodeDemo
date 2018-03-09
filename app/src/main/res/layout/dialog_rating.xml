@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="296dp"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_16">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:includeFontPadding="false"
+            android:text="請輸入店家各項評分"
+            android:textSize="14sp"
+            android:fontFamily="@font/notosanscjktc_medium" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tvRatingAvg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/button_color_search"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/padding_4"
+            android:paddingRight="@dimen/padding_4"
+            android:paddingTop="3dp"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:text="0.0" />
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3"></View>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="340dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingWifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/wifi"
+                app:cr_text="@string/detail_rate_text_wifi"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingQuiet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/quiet"
+                app:cr_text="@string/detail_rate_text_quiet"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingCheap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/money"
+                app:cr_text="@string/detail_rate_text_cheap"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingSeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/seat"
+                app:cr_text="@string/text_seat_count"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingCafe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/cup"
+                app:cr_text="@string/detail_rate_text_cafe"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/food"
+                app:cr_text="@string/detail_rate_text_food"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+            <tw.yalan.cafeoffice.views.CafeRatingBar
+                android:id="@+id/ratingMusic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cr_drawable="@drawable/pic"
+                app:cr_text="@string/detail_rate_text_music"></tw.yalan.cafeoffice.views.CafeRatingBar>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnClose"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/alert_btn_cancel"
+            android:textColor="@color/colorTextGrey_4"
+            android:textSize="14sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnSent"
+            style="?attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sent_rates"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

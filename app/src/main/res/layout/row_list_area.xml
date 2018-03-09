@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    tools:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/padding_4"
+        android:background="@drawable/selector_button_light"
+        android:textColor="@color/area_text"
+        android:textSize="12sp"
+        android:fontFamily="@font/notosanscjktc_medium"
+        tools:text="快速篩選" />
+
+</FrameLayout>

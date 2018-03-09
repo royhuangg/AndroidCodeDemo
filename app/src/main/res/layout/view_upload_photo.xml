@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="48dp"
+    android:layout_height="48dp"
+    android:background="@drawable/detail_upload_photo_bg"
+    android:padding="1dp">
+
+    <!--<ImageView-->
+    <!--android:id="@+id/ivPhotoSmall"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent" />-->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:drawableTop="@drawable/camera"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:gravity="center"
+        android:text="@string/upload_photo"
+        android:textColor="@color/md_white_1000"
+        android:textSize="10sp" />
+</FrameLayout>

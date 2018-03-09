@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.flexbox.FlexboxLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_top_line"
+    android:paddingBottom="@dimen/padding_16"
+    android:paddingTop="@dimen/padding_8"
+    app:alignContent="flex_start"
+    app:alignItems="flex_start"
+    app:dividerDrawable="@drawable/divider"
+    app:flexWrap="wrap"
+    app:showDivider="beginning|middle">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_wifi_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/wifi"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_wifi"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_wifi_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="5.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_quiet_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/quiet"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_quiet"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_quiet_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="2.0" />
+    </LinearLayout>
+    <!--海景第二排-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_cheap_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/money"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_cheap"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_cheap_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="5.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_seat_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/seat"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_seat"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_seat_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="2.0" />
+    </LinearLayout>
+    <!--海景第三排-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_cafe_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/cup"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_cafe"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_cafe_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="5.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_music_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/pic"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_music"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_music_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="2.0" />
+    </LinearLayout>
+    <!--海景第四排-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_socket_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/socket"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_socket"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_socket_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="2.0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_limittime_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/clock"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_limittime"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_limittime_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="不限" />
+    </LinearLayout>
+    <!--最後一排-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:layout_flexBasisPercent="50%">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_stand_t"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/clock"
+            android:drawablePadding="7dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/detail_rate_text_stand"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="12sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_rates_stand_v"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|right"
+            android:includeFontPadding="false"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="有" />
+    </LinearLayout>
+</com.google.android.flexbox.FlexboxLayout>

@@ -1,0 +1,159 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginBottom="@dimen/padding_16"
+            android:background="?attr/colorPrimary"
+            app:title="@string/title_member"
+            android:contentInsetEnd="0dp"
+            android:contentInsetLeft="0dp"
+            android:contentInsetRight="0dp"
+            android:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="19dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/edit" />
+        </android.support.v7.widget.Toolbar>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-8dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/padding_16"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivUserPhoto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                fresco:actualImageScaleType="centerCrop"
+                fresco:fadeDuration="300"
+                fresco:failureImage="@drawable/default_avator"
+                fresco:placeholderImage="@drawable/loading"
+                fresco:retryImage="@drawable/retry"
+                fresco:roundedCornerRadius="5dp"
+                fresco:roundingBorderColor="@color/md_white_1000"
+                fresco:roundingBorderWidth="2dp"
+                tools:background="@drawable/loading" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivUserPhoto"
+                android:includeFontPadding="false"
+                android:textColor="@color/md_white_1000"
+                android:textSize="16sp"
+                android:fontFamily="@font/notosanscjktc_bold"
+                tools:text="Yalan" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tvCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserName"
+                android:layout_toRightOf="@id/ivUserPhoto"
+                android:includeFontPadding="false"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp"
+                tools:text="Taipei" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCity"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/layoutExp"
+                android:layout_toRightOf="@id/ivUserPhoto"
+                android:textColor="@color/md_white_1000"
+                android:textSize="10sp"
+                android:fontFamily="@font/notosanscjktc_medium"
+                tools:text="喜歡咖啡，喜歡探索新事物，最常去巷弄中探索老咖啡館。" />
+
+            <FrameLayout
+                android:visibility="gone"
+                android:id="@+id/layoutExp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bg_exp"
+                android:paddingBottom="6dp"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:paddingTop="6dp">
+
+                <tw.yalan.cafeoffice.views.TypeFaceTextView
+                    android:id="@+id/tvExp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCity"
+                    android:layout_toRightOf="@id/ivUserPhoto"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    tools:text="LV1 20/100" />
+            </FrameLayout>
+        </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        style="@style/CafeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@id/appbar"
+        app:tabGravity="fill"></android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabLayout"></android.support.v4.view.ViewPager>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/tabLayout"
+        android:background="@drawable/shadow_top"></View>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_8"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:text="@string/text_already_rate"
+        android:textColor="@color/colorTabTextGrey"
+        android:textSize="16sp"/>
+
+
+    <TextView
+        android:id="@+id/tvRatingAvg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_color_search"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:paddingBottom="3dp"
+        android:paddingLeft="@dimen/padding_4"
+        android:paddingRight="@dimen/padding_4"
+        android:paddingTop="3dp"
+        android:text="0.0"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"/>
+</LinearLayout>

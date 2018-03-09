@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/wifi"
+        app:cr_text="@string/detail_rate_text_wifi" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingQuiet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/quiet"
+        app:cr_text="@string/detail_rate_text_quiet" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingCheap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/money"
+        app:cr_text="@string/detail_rate_text_cheap" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingSeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/seat"
+        app:cr_text="@string/text_seat_count" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingCafe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/cup"
+        app:cr_text="@string/detail_rate_text_cafe" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingFood"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/food"
+        app:cr_text="@string/detail_rate_text_food" />
+
+    <tw.yalan.cafeoffice.views.CafeRatingBar
+        android:id="@+id/ratingMusic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cr_drawable="@drawable/pic"
+        app:cr_text="@string/detail_rate_text_music" />
+
+</LinearLayout>

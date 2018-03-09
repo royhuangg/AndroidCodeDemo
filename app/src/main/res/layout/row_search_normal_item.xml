@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/layout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/item_bg"
+        android:padding="@dimen/padding_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_8"
+            android:layout_toLeftOf="@+id/tv_distance_hint"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_cafe_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="200dp"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="16sp"
+                tools:text="特好喝特好喝特好喝特特好喝特好喝特好喝特"/>
+
+            <TextView
+                android:id="@+id/tv_rating"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:drawableLeft="@drawable/icon_star"
+                android:fontFamily="@string/font_system_roboto_medium"
+                android:textSize="12sp"
+                tools:text="4.3"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@string/font_system_roboto_medium"
+            android:textSize="16sp"
+            tools:text="600m"/>
+
+        <TextView
+            android:id="@+id/tv_distance_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/padding_8"
+            android:layout_toLeftOf="@id/tv_distance"
+            android:text="@string/text_distance"
+            android:textColor="@color/colorTextGrey"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/md_grey_400"></View>
+</LinearLayout>
+

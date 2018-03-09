@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="pref_title_show_ad">支持作者，顯示廣告</string>
+    <string name="pref_description_show_ad">在搜尋結果中穿插廣告</string>
+
+
+</resources>

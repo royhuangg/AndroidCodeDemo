@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/padding_8"
+    android:paddingTop="@dimen/padding_8">
+
+    <LinearLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="@drawable/gallery_upload_photo_bg"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawableTop="@drawable/camera"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:gravity="center"
+            android:text="上傳照片"
+            android:textColor="@color/md_white_1000"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</FrameLayout>

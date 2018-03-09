@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="text_font" format="string" />
+    <attr name="adjust_top_ascent" format="boolean" />
+    <attr name="auto_marquee" format="boolean" />
+
+    <declare-styleable name="TypeFaceTextView">
+        <attr name="text_font" />
+        <attr name="adjust_top_ascent" />
+        <attr name="auto_marquee" />
+
+    </declare-styleable>
+    <declare-styleable name="TypeFaceButton">
+        <attr name="text_font" />
+        <attr name="adjust_top_ascent" />
+        <attr name="auto_marquee" />
+    </declare-styleable>
+    <declare-styleable name="TypeFaceEditTextView">
+        <attr name="text_font" />
+        <attr name="adjust_top_ascent" />
+        <attr name="auto_marquee" />
+
+    </declare-styleable>
+    <declare-styleable name="CafeRatingBar">
+        <attr name="cr_text" format="string"></attr>
+        <attr name="cr_drawable" format="reference"></attr>
+        <attr name="cr_numStarts" format="integer"></attr>
+        <attr name="cr_stepSize" format="float"></attr>
+        <attr name="cr_rating" format="float"></attr>
+
+    </declare-styleable>
+    <declare-styleable name="ExpandableLayout">
+        <attr name="canExpand" format="boolean" />
+        <attr name="startExpanded" format="boolean" />
+    </declare-styleable>
+</resources>

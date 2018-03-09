@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/streetview"
+        android:name="com.google.android.gms.maps.StreetViewPanoramaFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="tw.yalan.cafeoffice.activitys.cafemap.StreetViewActivity" />
+
+
+    <LinearLayout
+        android:visibility="invisible"
+        android:id="@+id/layout_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/shadow_top"
+        android:gravity="center_vertical"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginLeft="@dimen/padding_8"
+            android:src="@drawable/back_arrow" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="23dp">
+
+        <com.gigamole.library.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="#4D000000"
+            app:sl_shadow_distance="4px"
+            app:sl_shadow_radius="2dp"
+            app:sl_shadowed="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:background="@drawable/store_open_time_bg"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Sit Down Plz" />
+
+                <TextView
+                    android:id="@+id/tv_store_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_name"
+                    android:layout_marginTop="@dimen/padding_4"
+                    android:drawableLeft="@drawable/selector_circle_opentime"
+                    android:drawablePadding="@dimen/padding_4"
+                    android:gravity="center_vertical"
+                    android:text="@string/text_near_mrt_station"
+                    android:textColor="@color/store_status_color"
+                    android:textSize="12sp"
+                    tools:text="@string/text_open" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_store_status"
+                    android:layout_marginLeft="@dimen/padding_8"
+                    android:layout_toRightOf="@id/tv_store_status"
+                    android:fontFamily="@string/font_system_roboto_medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="12sp"
+                    tools:text="11:00-22:00" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/tv_time"
+                    android:layout_marginLeft="@dimen/padding_24"
+                    android:layout_toRightOf="@id/tv_time"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/icon_star" />
+
+                    <TextView
+                        android:id="@+id/tv_avg_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:fontFamily="@string/font_system_roboto_medium"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="12sp"
+                        tools:text="4.3" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </com.gigamole.library.ShadowLayout>
+
+        <com.gigamole.library.ShadowLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="#4D000000"
+            app:sl_shadow_distance="4px"
+            app:sl_shadow_radius="2dp"
+            app:sl_shadowed="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="64dp"
+                android:background="@drawable/button_color_dark"
+                android:gravity="right"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@string/font_system_roboto_medium"
+                    android:text="距離目前"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="16sp"
+                    tools:text="16.2KM" />
+            </LinearLayout>
+        </com.gigamole.library.ShadowLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/md_white_1000"
+        tools:title="@string/activity_post_comment_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/shadow_layout"
+        android:layout_below="@+id/toolbar"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/padding_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:minHeight="198dp">
+
+                <TextView
+                    android:id="@+id/tvEditTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_16"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_8"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_comment_sub_title_1"
+                    android:textSize="14sp" />
+
+
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvEditTitle"
+                    android:background="@color/md_white_1000"
+                    android:hint="Ex:東西很好吃，環境也很舒適，下次還想再來。"
+                    android:lineSpacingExtra="4sp"
+                    android:maxLength="200"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:textColor="@color/md_black_1000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTextCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:gravity="right"
+                android:paddingBottom="@dimen/padding_8"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_8"
+                android:paddingTop="@dimen/padding_8"
+                android:text="0/200"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvRateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:paddingBottom="@dimen/padding_8"
+                android:paddingLeft="@dimen/padding_16"
+                android:text="@string/post_comment_sub_title_2"
+                android:textSize="14sp" />
+
+            <LinearLayout
+
+                android:id="@+id/rateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical"
+                android:paddingBottom="18dp">
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbNotNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="18dp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/no_rate_now"
+                    android:textSize="14sp" />
+
+                <include
+                    android:id="@+id/layoutRateGroup"
+                    layout="@layout/layout_rate_group"></include>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/shadow_layout"
+        android:background="@drawable/shadow_bottom_light" />
+
+    <FrameLayout
+        android:id="@+id/shadow_layout"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/md_white_1000">
+
+        <com.gigamole.library.ShadowLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:layout_marginRight="@dimen/padding_12"
+            android:layout_marginTop="@dimen/padding_16"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/colorShadowButton"
+            app:sl_shadow_distance="6px"
+            app:sl_shadow_radius="2dp"
+            app:sl_shadowed="true">
+
+            <LinearLayout
+                android:id="@+id/btnPost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_color_light"
+                android:gravity="center"
+                android:padding="9dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/btn_confirm_send_with_space"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAvg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/padding_8"
+                    android:background="@drawable/button_color_dark"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_2"
+                    android:paddingLeft="@dimen/padding_4"
+                    android:paddingRight="@dimen/padding_4"
+                    android:paddingTop="@dimen/padding_2"
+                    android:text="0.0"
+                    android:textColor="@color/md_white_1000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </com.gigamole.library.ShadowLayout>
+    </FrameLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top" />
+</RelativeLayout>

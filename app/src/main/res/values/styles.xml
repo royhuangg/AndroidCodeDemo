@@ -1,0 +1,77 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textViewStyle">@style/CafeTextViewStyle</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="autoCompleteTextViewStyle">@style/cursorColor</item>
+        <item name="android:textColorSecondary">@color/md_white_1000</item>
+    </style>
+
+    <style name="KAPIFloating" parent="Widget.Design.FloatingActionButton">
+        <item name="colorPrimary">@color/colorNormalGreen</item>
+        <item name="colorAccent">@color/colorNormalGreen</item>
+
+    </style>
+
+    <style name="CafeTextViewStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:fontFamily">@font/notosanscjktc_regular</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="CafeTextViewMenuStyle" parent="TextAppearance.AppCompat.Large">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/md_white_1000</item>
+    </style>
+
+
+    <style name="Theme.Settings" parent="@style/AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
+        <!--<item name="toolbarStyle">@style/Widget.Toolbar</item>-->
+    </style>
+
+    <style name="RadioButtonStyle">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextBlack</item>
+        <item name="buttonTint">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="cursorColor" parent="Widget.AppCompat.AutoCompleteTextView">
+        <item name="android:textCursorDrawable">@drawable/cursor_color</item>
+    </style>
+
+    <style name="CafeTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorPrimaryDark</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabSelectedTextColor">@color/colorPrimaryDark</item>
+        <item name="tabPaddingStart">0dp</item>
+        <item name="tabPaddingEnd">0dp</item>
+
+    </style>
+
+    <style name="CafeRatingBar" parent="Theme.AppCompat">
+        <item name="android:progressDrawable">@drawable/ratingbar_icon</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:maxHeight">24dp</item>
+    </style>
+
+    <!--<style name="Widget.Toolbar" parent="@style/Widget.AppCompat.Toolbar">-->
+    <!--<item name="android:background">?attr/colorPrimary</item>-->
+    <!--&lt;!&ndash;<item name="android:navigationIcon">?attr/homeAsUpIndicator</item>&ndash;&gt;-->
+    <!--<item name="navigationIcon">?attr/homeAsUpIndicator</item>-->
+    <!--</style>-->
+
+</resources>

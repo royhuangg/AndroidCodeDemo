@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center_vertical"
+              android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="center"
+        tools:src="@drawable/wifi"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:paddingLeft="16dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        tools:text="@string/text_wifi"/>
+
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/btnMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        android:src="@drawable/minus"/>
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        tools:text="4.0"/>
+
+    <android.support.v7.widget.AppCompatImageButton
+        android:id="@+id/btnPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+
+        android:paddingLeft="@dimen/padding_16"
+        android:src="@drawable/plus"/>
+</LinearLayout>
+
+

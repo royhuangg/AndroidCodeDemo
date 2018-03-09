@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivUp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow"/>
+
+        <biz.kasual.materialnumberpicker.MaterialNumberPicker
+            android:id="@+id/pickerHour"
+            android:layout_width="48dp"
+            android:layout_height="172dp"
+            app:npBackgroundColor="@android:color/transparent"
+            app:npMaxValue="12"
+            app:npMinValue="1"
+            app:npSeparatorColor="@color/colorAccent"
+            app:npTextSize="32sp"/>
+
+        <ImageView
+            android:id="@+id/ivDown1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow_down"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:includeFontPadding="false"
+        android:text=":"
+        android:textSize="32sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivUp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow"/>
+
+        <biz.kasual.materialnumberpicker.MaterialNumberPicker
+            android:id="@+id/pickerMinute"
+            android:layout_width="48dp"
+            android:layout_height="172dp"
+            app:npBackgroundColor="@android:color/transparent"
+            app:npMaxValue="59"
+            app:npMinValue="0"
+            app:npSeparatorColor="@color/colorAccent"
+            app:npTextSize="32sp"/>
+
+        <ImageView
+            android:id="@+id/ivDown2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow_down"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:includeFontPadding="false"
+        android:text=" "
+        android:textSize="32sp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ivUp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow"/>
+
+        <biz.kasual.materialnumberpicker.MaterialNumberPicker
+            android:id="@+id/pickerAmPm"
+            android:layout_width="54dp"
+            android:layout_height="172dp"
+            app:npBackgroundColor="@android:color/transparent"
+            app:npDefaultValue="0"
+            app:npMaxValue="1"
+            app:npMinValue="0"
+            app:npSeparatorColor="@color/colorAccent"
+            app:npTextSize="32sp"/>
+
+        <ImageView
+            android:id="@+id/ivDown3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_picker_arrow_down"/>
+    </LinearLayout>
+</LinearLayout>

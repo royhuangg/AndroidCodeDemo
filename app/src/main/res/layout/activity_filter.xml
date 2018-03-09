@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="tw.yalan.cafeoffice.activitys.filter.CafeFilterActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <TextView
+            android:id="@+id/tv_restore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/padding_16"
+            android:padding="@dimen/padding_4"
+            android:text="@string/text_restore"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+    </android.support.v7.widget.Toolbar>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/layout_sliders"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/shadow_layout"
+        android:layout_below="@id/toolbar"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/padding_16">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_8"
+            android:paddingTop="@dimen/padding_8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:text="@string/filter_title_sort"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginLeft="@dimen/padding_16"
+                android:layout_marginRight="@dimen/padding_16"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/filter_item_bg"
+                android:gravity="center_vertical"
+                android:padding="@dimen/padding_2">
+
+                <TextView
+                    android:id="@+id/tabSortLeft"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_tab_content_left_primary_dark"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:gravity="center"
+                    android:minWidth="75dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/filter_setting_row_color"
+                    android:textSize="14sp"
+                    android:text="@string/filter_sort_by_near" />
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimaryDark" />
+
+
+                <TextView
+                    android:id="@+id/tabSortRight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_tab_content_right_primary_dark"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:gravity="center"
+                    android:minWidth="75dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/filter_setting_row_color"
+                    android:textSize="14sp"
+                    android:text="@string/filter_sort_by_rate_avg" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                android:text="@string/filter_title_fast_settings"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="14sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerSettings"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/padding_8"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_filter_setting" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_16"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/filter_title_pickers"
+                    android:textSize="14sp" />
+
+                <include
+                    android:id="@+id/slider_wifi"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_quiet"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_price"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_site"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_coffee"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_tasty"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <include
+                    android:id="@+id/slider_music"
+                    layout="@layout/view_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp" />
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:flexWrap="wrap"
+                    app:justifyContent="space_between">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="140dp"
+                        android:orientation="vertical"
+                        app:layout_flexGrow="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanscjktc_medium"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/padding_8"
+                            android:paddingRight="@dimen/padding_8"
+                            android:text="@string/text_has_limited_to_time"
+                            android:textSize="14sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false">
+
+                            <RadioButton
+                                android:id="@+id/radio_time_1"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_not_limited"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_time_2"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_work_date_no_limited"
+                                android:textSize="14sp" />
+                            <RadioButton
+                                android:id="@+id/radio_time_3"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_has_limited"
+                                android:textSize="14sp" />
+                            <RadioButton
+                                android:id="@+id/radio_time_4"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_all_day_no_limited"
+                                android:textSize="14sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="140dp"
+                        android:orientation="vertical"
+                        app:layout_flexGrow="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanscjktc_medium"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/padding_8"
+                            android:paddingRight="@dimen/padding_8"
+                            android:text="@string/text_has_socket"
+                            android:textSize="14sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radio_socket"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipChildren="false">
+
+                            <RadioButton
+                                android:id="@+id/radio_socket_1"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_not_limited"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_socket_2"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_some_socket"
+                                android:textSize="14sp" />
+
+                            <RadioButton
+                                android:id="@+id/radio_socket_3"
+                                style="@style/RadioButtonStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="-4dp"
+                                android:layout_marginTop="@dimen/padding_8"
+                                android:text="@string/radio_a_lot_of_socket"
+                                android:textSize="14sp" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="140dp"
+                        android:orientation="vertical"
+                        app:layout_flexGrow="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanscjktc_medium"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/padding_8"
+                            android:paddingRight="@dimen/padding_8"
+                            android:text="@string/filter_title_open_time"
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/cb_opening"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:text="@string/text_opening"
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/cb_current_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="14dp"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:text="@string/text_current_time"
+                            android:textSize="14sp" />
+
+                        <RelativeLayout
+                            android:id="@+id/layoutCurrentTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvTimeStart"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/under_line_bg"
+                                android:text="08:00"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvTo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@id/tvTimeStart"
+                                android:fontFamily="@font/notosanscjktc_medium"
+                                android:paddingLeft="@dimen/padding_8"
+                                android:paddingRight="@dimen/padding_8"
+                                android:text="@string/text_to"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/tvTimeEnd"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/padding_8"
+                                android:layout_toEndOf="@id/tvTo"
+                                android:background="@drawable/under_line_bg"
+                                android:text="20:00"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:minWidth="140dp"
+                        android:orientation="vertical"
+                        app:layout_flexGrow="1">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanscjktc_medium"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="@dimen/padding_8"
+                            android:paddingRight="@dimen/padding_8"
+                            android:text="@string/filter_title_other"
+                            android:textSize="14sp" />
+
+                        <android.support.v7.widget.AppCompatCheckBox
+                            android:id="@+id/cb_stand_up"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorPrimaryDark"
+                            android:text="@string/text_can_stand_up"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </com.google.android.flexbox.FlexboxLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/shadow_layout"
+        android:background="@drawable/shadow_bottom_light" />
+
+    <com.gigamole.library.ShadowLayout
+        android:id="@+id/shadow_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/padding_16"
+        android:layout_marginLeft="@dimen/padding_16"
+        android:layout_marginRight="@dimen/padding_12"
+        android:layout_marginTop="@dimen/padding_16"
+        app:sl_shadow_angle="90"
+        app:sl_shadow_color="@color/colorShadowButton"
+        app:sl_shadow_distance="6px"
+        app:sl_shadow_radius="2dp"
+        app:sl_shadowed="true">
+
+        <Button
+            android:id="@+id/btn_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_color_light"
+            android:text="@string/btn_filter_start"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </com.gigamole.library.ShadowLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top" />
+</RelativeLayout>

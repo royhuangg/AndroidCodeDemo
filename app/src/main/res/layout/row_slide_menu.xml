@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tw.yalan.cafeoffice.views.ExpandableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="@dimen/padding_32"
+            android:scaleType="center"
+            tools:src="@drawable/taipei_2" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/CafeTextViewMenuStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/recycler_menu"
+            android:layout_alignEnd="@+id/tv_menu_header"
+            android:layout_marginEnd="24dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:textColor="@color/menu_text"
+            android:textSize="18sp"
+            tools:text="北部" />
+
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:src="@drawable/selector_ic_expand" />
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canExpand="true"></android.support.v7.widget.RecyclerView>
+</tw.yalan.cafeoffice.views.ExpandableLayout>

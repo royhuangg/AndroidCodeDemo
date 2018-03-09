@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!--<FrameLayout-->
+    <!--android:id="@+id/fragment"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/toolbar" />-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/version_name" />
+
+            <TextView
+                android:id="@+id/tvVersionName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1.0.0"
+                android:textColor="@color/colorTextBlack" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGrey2" />
+
+        <LinearLayout
+            android:id="@+id/itemWrite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_bg"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/text_help_us" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGrey2" />
+        <LinearLayout
+            android:id="@+id/itemLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/item_bg"
+            android:padding="@dimen/padding_16">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/colorTextGrey"
+                android:text="@string/logout" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/lineLogout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorLineGrey2" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top" />
+
+    <View
+        android:id="@+id/shadowBottom"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@+id/bottomLayout"
+        android:background="@drawable/shadow_bottom"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:fillViewport="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="40dp"
+                android:src="@drawable/icon_launch" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="25dp"
+                android:layout_toEndOf="@id/ivIcon"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:lineSpacingExtra="0sp"
+                    android:text="@string/kapi_qa_title"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/padding_16"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:lineSpacingExtra="0sp"
+                    android:text="@string/do_you_like_kapi"
+                    android:textColor="#ffffff"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnUnlike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_button_search"
+                        android:fontFamily="@font/notosanscjktc_medium"
+                        android:minHeight="36dp"
+                        android:minWidth="80dp"
+                        android:text="@string/btn_unlike"
+                        android:textColor="@color/white" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="8dp"
+                        android:layout_height="0dp" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnLike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button_color_light"
+                        android:minHeight="36dp"
+                        android:minWidth="80dp"
+                        android:text="@string/btn_like"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:padding="@dimen/padding_16"
+                android:src="@drawable/clear" />
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
+

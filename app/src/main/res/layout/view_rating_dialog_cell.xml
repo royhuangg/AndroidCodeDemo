@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/padding_12"
+    android:paddingLeft="@dimen/padding_16"
+    android:paddingRight="@dimen/padding_16"
+    android:paddingTop="@dimen/padding_12">
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:drawablePadding="7dp"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        android:fontFamily="@font/notosanscjktc_medium"
+        tools:text="@string/detail_rate_text_wifi" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/CafeRatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

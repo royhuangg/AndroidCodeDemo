@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    >
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        tools:src="@drawable/wifi" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        tools:text="@string/text_wifi"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="20sp" />
+
+    <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+        android:id="@+id/discrete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/padding_16"
+        android:paddingRight="@dimen/padding_16"
+        app:dsb_allowTrackClickToDrag="false"
+        app:dsb_indicatorColor="@color/colorPrimary"
+        app:dsb_max="10"
+        app:dsb_min="0"
+        app:dsb_progressColor="@color/colorPrimary"
+        app:dsb_rippleColor="@color/colorPrimaryDark"
+        app:dsb_trackColor="@color/colorSeekTrackGray"/>
+
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        tools:text="4.0" />
+
+</LinearLayout>
+
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/padding_8"
+        android:drawablePadding="@dimen/padding_8"
+        android:drawableRight="@drawable/tick"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:gravity="center"
+        android:text="@string/text_already_write"
+        android:textColor="@color/colorTabTextGrey"
+        android:textSize="16sp"/>
+</LinearLayout>

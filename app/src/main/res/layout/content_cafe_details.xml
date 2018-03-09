@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--xmlns:tools="http://schemas.android.com/tools"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent">-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <include
+        android:id="@+id/tabs_layout"
+        layout="@layout/view_details_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:id="@+id/view_line1"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@id/tabs_layout"
+        android:background="@color/colorLineGrey" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_store_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_line1"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_16"
+        android:includeFontPadding="false"
+        android:text="@string/detail_header_store_info"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/cafe_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_header_store_info"
+        android:background="@drawable/bg_white_top_line"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16">
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_cafe_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="16sp"
+            tools:text="決呂咖啡" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/tagsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap">
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_8"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="@dimen/padding_8"
+                android:src="@drawable/clock_16" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tv_store_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:drawablePadding="@dimen/padding_4"
+                android:drawableStart="@drawable/selector_circle_opentime"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:textColor="@color/store_status_color"
+                android:textSize="12sp"
+                tools:text="@string/text_open" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="0dp"
+                android:ellipsize="end"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@color/colorTextBlack"
+                android:textSize="12sp"
+                tools:text="11:00-22:00" />
+
+            <Button
+                android:id="@+id/btn_watch_other_time"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="14dp"
+                android:background="@drawable/selector_button_dark"
+                android:includeFontPadding="false"
+                android:text="@string/btn_other_open_time"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/phone"
+            android:drawablePadding="@dimen/padding_8"
+            android:autoLink="phone"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="12sp"
+            tools:text="(02)29552444" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/pin_16"
+            android:drawablePadding="@dimen/padding_8"
+            android:autoLink="map"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="12sp"
+            tools:text="台北市內湖區陽光街321巷48號1樓" />
+
+        <TextView
+            android:id="@+id/tvPriceRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:fontFamily="@font/notosanscjktc_regular"
+            android:drawableLeft="@drawable/ic_detail_money"
+            android:drawablePadding="6dp"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="12sp"
+            tools:text="NT$101-200元 / 人" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_below="@id/cafe_info_layout"
+        android:background="@drawable/shadow_top" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cafe_info_layout"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_32"
+        android:includeFontPadding="false"
+        android:text="@string/detail_header_map"
+        android:textSize="12sp" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_header_map"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cafe_info_layout"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginRight="@dimen/padding_8"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="12sp"
+        tools:text="距離600m" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="tw.yalan.cafeoffice.fragments.MySupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="184dp"
+        android:layout_below="@id/tv_header_map"
+        app:liteMode="true"
+        tools:context="tw.yalan.cafeoffice.activitys.details.CafeDetailsActivity" />
+
+    <LinearLayout
+        android:id="@+id/map_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map"
+        android:background="@color/md_white_1000"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_8">
+
+        <FrameLayout
+            android:id="@+id/btn_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_search"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe_info_layout"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/navigate"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minHeight="24dp"
+                android:text="@string/navigation_on_map"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/btn_watch_street"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_dark"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe_info_layout"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/street"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/watch_street_view"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_below="@id/map_footer"
+        android:background="@drawable/shadow_top" />
+
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_rates"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/map_footer"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_32"
+        android:includeFontPadding="false"
+        android:text="@string/detail_header_rates"
+        android:textSize="12sp" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_rates_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_header_rates"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/map_footer"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginRight="@dimen/padding_8"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="12sp"
+        tools:text="143人已評分" />
+
+    <include
+        android:id="@+id/rates_layout"
+        layout="@layout/layout_detail_rate_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_header_rates" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/rates_layout"
+        android:background="@color/colorLineGrey2" />
+
+    <LinearLayout
+        android:id="@+id/rate_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rates_layout"
+        android:layout_marginTop="1dp"
+        android:background="@color/md_white_1000"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_8">
+
+        <FrameLayout
+            android:id="@+id/btn_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_dark"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cafe_info_layout"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/star_w"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/btn_rating"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_below="@id/rate_footer"
+        android:background="@drawable/shadow_top" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_reviews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rate_footer"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_32"
+        android:includeFontPadding="false"
+        android:text="@string/detail_header_reviews"
+        android:textSize="12sp" />
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_reviews_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_header_reviews"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/map_footer"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginRight="@dimen/padding_8"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="12sp"
+        tools:text="13人已留言" />
+
+    <FrameLayout
+        android:id="@+id/layoutComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_header_reviews"
+        android:background="@drawable/bg_white_top_line">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_top_line" />
+
+        <TextView
+            android:id="@+id/tvEmptyComment"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="目前尚無留言，給點建議或心得分享吧:D"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/comments_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutComment"
+        android:background="@drawable/bg_white_top_line"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_8">
+
+        <FrameLayout
+            android:id="@+id/btn_more_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_search"
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/btn_more_comments_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:minHeight="24dp"
+                android:text="@string/see_more_comment_default"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+
+        <android.support.v4.widget.Space
+            android:layout_width="4dp"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/btn_submit_a_comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_dark"
+
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/btn_submit_a_comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/comment_w"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/submit_a_comment"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_below="@id/comments_footer"
+        android:background="@drawable/shadow_top" />
+
+
+    <tw.yalan.cafeoffice.views.TypeFaceTextView
+        android:id="@+id/tv_header_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/comments_footer"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginTop="@dimen/padding_32"
+        android:includeFontPadding="false"
+        android:text="@string/detail_header_photos"
+        android:textSize="12sp" />
+
+    <FrameLayout
+        android:id="@+id/layoutPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_header_photo"
+        android:background="@drawable/bg_white_top_line">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_photos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:minHeight="114dp"
+            android:padding="@dimen/padding_8" />
+
+        <TextView
+            android:id="@+id/tvEmptyPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="目前尚無照片，成為第一個上傳照片的人吧！"
+            android:textColor="@color/colorTextGrey_3"
+            android:textSize="14sp" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/photos_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutPhoto"
+        android:background="@drawable/bg_white_top_line"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_8">
+
+
+        <FrameLayout
+            android:id="@+id/btn_upload_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_dark"
+
+            android:paddingBottom="11dp"
+            android:paddingTop="11dp">
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/btn_upload_photo_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawableLeft="@drawable/camera"
+                android:drawablePadding="@dimen/padding_4"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/btn_upload_photo"
+                android:textColor="@color/md_white_1000"
+                android:textSize="12sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6px"
+        android:layout_below="@id/photos_footer"
+        android:background="@drawable/shadow_top" />
+</RelativeLayout><!--</ScrollView>-->

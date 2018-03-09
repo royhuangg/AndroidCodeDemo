@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_8"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp">
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_4"
+        android:paddingRight="@dimen/padding_8"
+        tools:background="@drawable/selector_fast_filter">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:background="@drawable/button_color_dark"
+            tools:src="@drawable/filter" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="@dimen/padding_4"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            tools:text="快速篩選" />
+    </LinearLayout>
+
+</LinearLayout>

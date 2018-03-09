@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/padding_8"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp">
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/padding_4"
+        android:paddingRight="@dimen/padding_8"
+        android:background="@drawable/button_color_dark">
+
+        <ViewSwitcher
+            android:id="@+id/vsSelect"
+            android:layout_width="24dp"
+            android:layout_height="24dp">
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/button_color_dark"
+                android:src="@drawable/filter" />
+
+            <tw.yalan.cafeoffice.views.TypeFaceTextView
+                android:id="@+id/tvSelectCount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_bold"
+                android:background="@drawable/button_color_white"
+                tools:text="1" />
+        </ViewSwitcher>
+
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/padding_4"
+            android:textColor="@color/md_white_1000"
+            android:textSize="12sp"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:text="@string/fast_filter_0" />
+    </LinearLayout>
+
+</LinearLayout>

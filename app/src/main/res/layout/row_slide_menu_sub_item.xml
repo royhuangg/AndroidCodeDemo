@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@drawable/menu_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="72dp"
+    android:paddingRight="@dimen/padding_16">
+
+
+
+    <TextView
+        android:id="@+id/tv_content"
+        style="@style/CafeTextViewMenuStyle"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="16sp"
+        android:fontFamily="@font/notosanscjktc_medium"
+        tools:text="台北"
+        android:layout_above="@+id/recycler_menu"
+        android:layout_alignEnd="@+id/tv_menu_header" />
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/selector_ic_done" />
+</LinearLayout>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/item_bg"
+    android:paddingLeft="@dimen/padding_8"
+    android:paddingRight="@dimen/padding_8"
+    android:paddingTop="@dimen/padding_8">
+
+    <ImageView
+        android:id="@+id/iv_cafe"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp" />
+
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_cafe_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toEndOf="@+id/iv_cafe"
+        android:layout_toStartOf="@+id/tv_rating_avg"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        tools:text="決呂咖啡" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_store_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_cafe_name"
+        android:layout_below="@+id/tv_cafe_name"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:drawablePadding="@dimen/padding_4"
+        android:drawableStart="@drawable/selector_circle_opentime"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="12sp"
+        tools:text="@string/text_open" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_cafe_name"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@id/tv_store_status"
+        android:ellipsize="end"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="12sp"
+        tools:text="11:00-22:00" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_cafe_name"
+        android:layout_alignStart="@id/tv_cafe_name"
+        android:layout_below="@id/tv_store_status"
+        android:gravity="center_vertical"
+        android:minHeight="36dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            tools:text="200M" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <tw.yalan.cafeoffice.views.TagView
+            android:id="@+id/tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLayoutCompat"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:layout_marginStart="@dimen/padding_16"
+            android:layout_toEndOf="@+id/tv_cafe_name"
+            android:layout_toRightOf="@+id/tv_cafe_name"
+            android:visibility="gone"
+            app:tagTextSize="12sp"
+            tools:tagText="店員很正"
+            tools:visibility="visible" />
+
+        <tw.yalan.cafeoffice.views.TagView
+            android:id="@+id/tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLayoutCompat"
+            android:layout_toEndOf="@+id/tv_cafe_name"
+            android:layout_toRightOf="@+id/tv_cafe_name"
+            android:visibility="gone"
+            app:tagTextSize="12sp"
+            tools:tagText="店員很正"
+            tools:visibility="visible" />
+
+        <tw.yalan.cafeoffice.views.TagView
+            android:id="@+id/tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/linearLayoutCompat"
+            android:layout_toEndOf="@+id/tv_cafe_name"
+            android:layout_toRightOf="@+id/tv_cafe_name"
+            android:visibility="gone"
+            app:tagTextSize="12sp"
+            tools:tagText="店員很正"
+            tools:visibility="visible" />
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tv_rating_avg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/button_color_dark"
+        android:includeFontPadding="false"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:textColor="@color/md_white_1000"
+        android:textSize="14sp"
+        tools:text="4.6" />
+</RelativeLayout>

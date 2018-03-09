@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="tw.yalan.cafeoffice.activitys.about.AboutActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/padding_24">
+
+            <ImageView
+                android:id="@+id/iv_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/padding_40"
+                android:layout_marginTop="33dp"
+                android:src="@drawable/logo_v_2" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_icon"
+                android:layout_marginStart="@dimen/padding_16"
+                android:layout_toEndOf="@id/iv_icon"
+                android:text="@string/kapi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvSubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/tvTitle"
+                android:layout_alignTop="@id/iv_icon"
+                android:layout_toEndOf="@id/tvTitle"
+                android:text="@string/findkapi"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvSlogan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/tvTitle"
+                android:layout_below="@id/tvTitle"
+                android:layout_marginTop="@dimen/padding_4"
+                android:letterSpacing="0.07"
+                android:text="@string/text_about_slogan"
+                android:textColor="@color/colorTextGrey_3"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnSpecial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/tvTitle"
+                android:layout_below="@id/tvSlogan"
+                android:layout_marginTop="@dimen/padding_8"
+                android:background="@drawable/selector_button_dark"
+                android:minHeight="24dp"
+                android:paddingEnd="6dp"
+                android:paddingStart="6dp"
+                android:text="@string/see_special_about_kapi"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_icon"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="@dimen/padding_40"
+                android:paddingRight="@dimen/padding_40">
+
+                <tw.yalan.cafeoffice.views.TypeFaceTextView
+                    android:id="@+id/tv_product_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/about_subtitle_product"
+
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_product_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_product_title"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:lineSpacingExtra="@dimen/padding_4"
+                    android:text="@string/text_product_detail"
+                    android:textColor="@color/colorTextGrey"
+                    android:textSize="14sp" />
+
+                <tw.yalan.cafeoffice.views.TypeFaceTextView
+                    android:id="@+id/tv_team_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_product_content"
+                    android:layout_marginTop="@dimen/padding_24"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="團隊成員"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/layout_team_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_8"
+                    android:layout_below="@id/tv_team_title"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <com.google.android.flexbox.FlexboxLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:flexWrap="wrap"
+                        app:justifyContent="space_between">
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_16">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_system_roboto_medium"
+                                android:text="@string/designer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_4"
+                                android:text="@string/simon_lin"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_16">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_system_roboto_medium"
+                                android:text="@string/android_developer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_4"
+                                android:text="@string/yalan"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_16">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_system_roboto_medium"
+                                android:text="@string/ios_developer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_4"
+                                android:text="@string/samuel"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_16">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_system_roboto_medium"
+                                android:text="@string/ios_developer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_4"
+                                android:text="@string/shou"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/padding_16">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@string/font_system_roboto_medium"
+                                android:text="@string/back_end_developer"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/padding_4"
+                                android:text="@string/jack"
+                                android:textColor="@color/colorTextBlack"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </com.google.android.flexbox.FlexboxLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_contact_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_team_content"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/menu_contact_us"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvContact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_contact_title"
+                    android:autoLink="email"
+                    android:text="kapitw.team@gmail.com"
+                    android:textColor="@color/colorTextGrey_2"
+                    android:textColorLink="@color/colorTextGrey_2"
+                    android:textSize="12sp" />
+
+                <tw.yalan.cafeoffice.views.TypeFaceTextView
+                    android:id="@+id/tv_api_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvContact"
+                    android:layout_marginTop="@dimen/padding_16"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="資料來源"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_api_title"
+                    android:autoLink="web"
+                    android:text="https://cafenomad.tw/"
+                    android:textColor="@color/colorTextGrey_2"
+                    android:textColorLink="@color/colorTextGrey_2"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top"></View>
+</RelativeLayout>

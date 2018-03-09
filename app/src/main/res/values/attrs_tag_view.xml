@@ -1,0 +1,8 @@
+<resources>
+    <declare-styleable name="TagView">
+        <attr name="tagText" format="string" />
+        <attr name="tagTextSize" format="dimension" />
+        <attr name="tagTextColor" format="color" />
+        <attr name="tagBackground" format="color|reference" />
+    </declare-styleable>
+</resources>

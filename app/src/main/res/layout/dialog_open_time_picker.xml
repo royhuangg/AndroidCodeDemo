@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="296dp"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_16">
+
+        <TextView
+            android:id="@+id/tvReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableStart="@drawable/icon_back_arrow"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:includeFontPadding="false"
+            android:text="@string/btn_return"
+            android:textSize="14sp" />
+
+        <tw.yalan.cafeoffice.views.TypeFaceTextView
+            android:id="@+id/tvDayOfWeek"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button_color_search"
+            android:paddingBottom="3dp"
+            android:paddingLeft="@dimen/padding_4"
+            android:paddingRight="@dimen/padding_4"
+            android:paddingTop="3dp"
+            android:text="0.0"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp"
+            android:fontFamily="@font/notosanscjktc_medium" />
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3" />
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tagsLayout"
+        style="@style/CafeTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+    </android.support.design.widget.TabLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3" />
+
+    <include
+        layout="@layout/layout_time_picker"
+        android:layout_width="match_parent"
+        android:layout_height="264dp">
+
+    </include>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.1"
+        android:background="@color/colorTextGrey_3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="@dimen/padding_8">
+
+        <TextView
+            android:id="@+id/btnSetAll"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_search"
+            android:gravity="center"
+            android:text="@string/open_picker_btn_set_all"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp" />
+
+        <android.support.v4.widget.Space
+            android:layout_width="@dimen/padding_8"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/btnSetSingle"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_button_dark"
+            android:gravity="center"
+            android:text="@string/open_picker_btn_set_single"
+            android:textColor="@color/md_white_1000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</LinearLayout>

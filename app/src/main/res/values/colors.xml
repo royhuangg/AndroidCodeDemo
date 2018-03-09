@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#c8955e</color>
+    <color name="colorPrimaryDark">#784d1f</color>
+    <color name="colorPrimaryDarkWithAlpha">#33784d1f</color>
+    <color name="colorAccent">@color/md_brown_800</color>
+    <color name="colorTextBlue">#0277bd</color>
+    <color name="colorTextBlack">#de000000</color>
+    <color name="colorSeekTrackGray">#42000000</color>
+    <color name="colorShadowButton">#eec8955e</color>
+    <color name="colorTextGrey">@color/md_grey_700</color>
+    <color name="colorTabTextGrey">#80333333</color>
+    <color name="colorTextGrey_2">#de333333</color>
+    <color name="colorTextGrey_3">#b3333333</color>
+    <color name="colorTextGrey_4">#4d333333</color>
+    <color name="colorTextGrey_5">#4c333333</color>
+
+    <color name="colorCommentVoteNumber">#333333</color>
+
+    <color name="colorNormalGreen">#9f9426</color>
+    <color name="colorPressGreen">#857C1F</color>
+    <color name="colorBackground">#F3F3F3</color>
+    <color name="colorLineGrey">#E3E3E3</color>
+    <color name="colorLineGrey2">#E6E6E6</color>
+    <color name="colorUnderLine">#D4D4D4</color>
+
+    <color name="colorInnerShadow">#1a000000</color>
+
+    <color name="menu_selected_bg">#33C8955E</color>
+    <color name="colorGreen">#6dd551</color>
+    <color name="colorRed">#deef3939</color>
+
+    <color name="cluster_1">#bbc632</color>
+    <color name="cluster_2">#c1ab94</color>
+    <color name="cluster_3">#c8955e</color>
+    <color name="cluster_4">#a56f34</color>
+    <color name="cluster_5">#9f9426</color>
+    <color name="cluster_6">#72781f</color>
+    <color name="cluster_7">#784d1f</color>
+
+    <color name="fb_blue">#3b5998</color>
+    <color name="md_white_alpha_40">#68ffffff</color>
+    <color name="colorBackgroundMain">#f3f3f3</color>
+
+    <color name="colorTabCenter">#f9c816</color>
+
+
+</resources>

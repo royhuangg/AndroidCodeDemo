@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:scaleType="center"
+        tools:src="@drawable/wifi" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="14sp"
+        tools:text="@string/text_wifi" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:background="@drawable/filter_item_bg"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_2">
+
+        <TextView
+            android:id="@+id/tabLeft"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tab_content_left"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/filter_setting_row_color"
+            android:textSize="14sp"
+            tools:text="很慢" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/tabCenter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tab_content_center"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:gravity="center"
+            android:minWidth="75dp"
+
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="14sp"
+            tools:text="還好" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark" />
+
+
+        <TextView
+            android:id="@+id/tabRight"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_tab_content_right"
+            android:fontFamily="@font/notosanscjktc_medium"
+            android:gravity="center"
+            android:minWidth="75dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/filter_setting_row_color"
+            android:textSize="14sp"
+            tools:text="很安靜" />
+    </LinearLayout>
+</LinearLayout>
+
+

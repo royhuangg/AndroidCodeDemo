@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackgroundMain"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/md_white_1000"
+        tools:title="新增店家" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomLayout"
+        android:layout_below="@id/toolbar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:paddingBottom="@dimen/padding_8"
+                android:paddingLeft="@dimen/padding_16"
+                android:text="@string/post_cafe_title_help_me"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_name"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ViewSwitcher
+                        android:id="@+id/switcherCafeName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/md_white_1000"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16">
+
+                        <TextView
+                            android:id="@+id/tvCafeName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/post_cafe_hint_select_name"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="16sp" />
+
+                        <android.support.v7.widget.AppCompatEditText
+                            android:id="@+id/etCafeName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/md_white_1000"
+                            android:hint="@string/post_cafe_hint_input_name"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:textColor="@color/colorTextBlack"
+                            android:textSize="16sp" />
+                    </ViewSwitcher>
+
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/btnSwitchInputType"
+                        style="?android:attr/buttonBarButtonStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/self_input"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_city"
+                    android:textSize="14sp" />
+
+                <FrameLayout
+                    android:id="@+id/selectCityLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_16">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:background="@color/md_white_1000"
+                        android:hint="@string/post_cafe_hint_city"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_navigate_next_24dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_tag"
+                    android:textSize="14sp" />
+                <!--<com.facebook.shimmer.ShimmerFrameLayout-->
+                <!--android:id="@+id/shimmerTags"-->
+                <!--android:minHeight="60dp"-->
+                <!--app:auto_start="true"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/tagsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/padding_12"
+                    android:paddingRight="@dimen/padding_12"
+                    app:flexWrap="wrap">
+
+                </com.google.android.flexbox.FlexboxLayout>
+                <!--</com.facebook.shimmer.ShimmerFrameLayout>-->
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:id="@+id/rateLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_16">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/post_cafe_title_rate"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivArrowRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_navigate_next_24dp" />
+
+                <android.support.v7.widget.ViewStubCompat
+                    android:id="@+id/ratedStub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/view_post_cafe_rate_avg" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:id="@+id/timeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_16">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:text="@string/post_cafe_title_time"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivArrowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_navigate_next_24dp" />
+
+                <android.support.v7.widget.ViewStubCompat
+                    android:id="@+id/timeStub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout="@layout/view_post_cafe_time_selected" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_price_range"
+                    android:textSize="14sp" />
+
+                <FrameLayout
+                    android:id="@+id/selectPriceRangeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="@dimen/padding_16">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:id="@+id/tvPriceRange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="13dp"
+                        android:background="@color/md_white_1000"
+                        android:hint="@string/post_cafe_hint_price_range"
+                        android:paddingLeft="@dimen/padding_16"
+                        android:paddingRight="@dimen/padding_16"
+                        android:textColor="@color/colorTextBlack"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:src="@drawable/ic_navigate_next_24dp" />
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_16"
+                android:fontFamily="@font/notosanscjktc_medium"
+                android:paddingBottom="@dimen/padding_8"
+                android:paddingLeft="@dimen/padding_16"
+                android:text="@string/filter_title_other"
+                android:textSize="14sp" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:paddingLeft="@dimen/padding_16"
+                android:paddingRight="@dimen/padding_16"
+                app:flexWrap="wrap"
+                app:justifyContent="space_between">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minWidth="140dp"
+                    android:orientation="vertical"
+                    app:layout_flexGrow="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjktc_medium"
+                        android:paddingBottom="5dp"
+                        android:text="@string/text_has_limited_to_time"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioTimeGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false">
+
+                        <RadioButton
+                            android:id="@+id/radioTime1"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_has_limited"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioTime2"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_work_date_no_limited"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioTime3"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_all_day_no_limited"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioTime4"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_not_sure"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:minWidth="140dp"
+                    android:orientation="vertical"
+                    app:layout_flexGrow="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/notosanscjktc_medium"
+                        android:paddingBottom="5dp"
+                        android:text="@string/text_has_socket"
+                        android:textSize="14sp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioSocketGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipChildren="false">
+
+                        <RadioButton
+                            android:id="@+id/radioSocket1"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_not_socket"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioSocket2"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_some_socket"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioSocket3"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_a_lot_of_socket"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioSocket4"
+                            style="@style/RadioButtonStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="-4dp"
+                            android:layout_marginTop="@dimen/padding_8"
+                            android:text="@string/radio_not_sure"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/cbStandUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="-4dp"
+                    android:layout_marginTop="10dp"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:text="@string/post_cafe_cb_can_stand_up"
+                    android:textSize="14sp" />
+
+
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_address"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:background="@color/md_white_1000"
+                    android:hint="@string/post_cafe_hint_address"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:textColor="@color/colorTextBlack"
+                    android:textSize="16sp"
+                    tools:text="台北市大同區民權東路162號" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_phone"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:background="@color/md_white_1000"
+                    android:hint="@string/post_cafe_hint_phone"
+                    android:inputType="numberDecimal"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:textSize="16sp"
+                    tools:text="02-29554444" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_facebook"
+                    android:textSize="14sp" />
+
+                <android.support.v7.widget.AppCompatEditText
+                    android:id="@+id/etFacebookUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="13dp"
+                    android:background="@color/md_white_1000"
+                    android:hint="@string/post_cafe_hint_facebook_url"
+                    android:inputType="text|textUri"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:paddingRight="@dimen/padding_16"
+                    android:textSize="16sp"
+                    tools:text="https://www.facebook.com/1234563" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/colorLineGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19dp"
+                android:background="@color/md_white_1000"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="13dp"
+                    android:fontFamily="@font/notosanscjktc_medium"
+                    android:paddingBottom="@dimen/padding_4"
+                    android:paddingLeft="@dimen/padding_16"
+                    android:text="@string/post_cafe_title_upload_photo"
+                    android:textSize="14sp" />
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerPhotos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:minHeight="114dp"
+                    android:padding="@dimen/padding_8" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_above="@+id/bottomLayout"
+        android:background="@drawable/shadow_bottom_light" />
+
+    <RelativeLayout
+        android:id="@+id/bottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/md_white_1000">
+
+
+        <com.gigamole.library.ShadowLayout
+            android:id="@+id/shadowLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_16"
+            android:layout_marginLeft="@dimen/padding_16"
+            android:layout_marginRight="@dimen/padding_12"
+            android:layout_marginTop="@dimen/padding_16"
+            app:sl_shadow_angle="90"
+            app:sl_shadow_color="@color/colorShadowButton"
+            app:sl_shadow_distance="6px"
+            app:sl_shadow_radius="2dp"
+            app:sl_shadowed="true">
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_color_light"
+                android:text="@string/btn_post_new_cafe"
+                android:textColor="@color/md_white_1000"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </com.gigamole.library.ShadowLayout>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_top" />
+</RelativeLayout>

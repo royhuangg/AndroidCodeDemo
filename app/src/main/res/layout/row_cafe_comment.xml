@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/md_white_1000"
+    android:padding="@dimen/padding_16">
+
+    <ImageView
+        android:id="@+id/ivPhoto"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/comment_photo_bg"
+        android:padding="1dp" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@+id/ivPhoto"
+        android:layout_toLeftOf="@+id/tvSubmitTime"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:lineSpacingExtra="4sp"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="12sp"
+        tools:text="Yalan" />
+
+    <TextView
+        android:id="@+id/tvSubmitTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tvUserName"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/padding_8"
+        android:textColor="@color/colorTabTextGrey"
+        android:textSize="10sp"
+        tools:text="25分鐘前" />
+
+
+    <TextView
+        android:id="@+id/tvComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvUserName"
+        android:layout_below="@id/tvUserName"
+        android:lineSpacingExtra="4sp"
+        android:textColor="@color/colorTextGrey_3"
+        android:textSize="14sp"
+        tools:text="餐點真的很好吃，環境舒適、音樂也很好聽，非常適合朋友聚會或是下午來工作！真心推薦這間好店～有時候還有店貓呢！" />
+
+
+    <TextView
+        android:id="@+id/tvUpVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvUserName"
+        android:layout_below="@+id/tvComment"
+        android:drawableLeft="@drawable/upvote"
+        android:drawablePadding="@dimen/padding_4"
+        android:padding="@dimen/padding_8"
+        android:textColor="@color/colorCommentVoteNumber"
+        android:textSize="14sp"
+        tools:text="9" />
+
+
+    <TextView
+        android:id="@+id/tvDownVote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvComment"
+        android:layout_marginLeft="96dp"
+        android:drawableLeft="@drawable/downvote"
+        android:drawablePadding="@dimen/padding_4"
+        android:padding="8dp"
+        android:textColor="@color/colorCommentVoteNumber"
+        android:textSize="14sp"
+        tools:text="9" />
+
+
+</RelativeLayout>

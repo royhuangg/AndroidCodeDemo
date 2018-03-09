@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingRight="@dimen/padding_8">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_button_filter_setting"
+        android:fontFamily="@font/notosanscjktc_medium"
+        android:gravity="center"
+        android:paddingBottom="9dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="9dp"
+        android:textColor="@color/filter_setting_row_color"
+        android:textSize="14sp"
+        tools:text="C/P值高"/>
+</FrameLayout>

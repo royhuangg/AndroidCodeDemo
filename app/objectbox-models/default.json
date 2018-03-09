@@ -1,0 +1,70 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:3648464332150574989",
+      "lastPropertyId": "11:4862997340240692169",
+      "name": "ShopArea",
+      "properties": [
+        {
+          "id": "1:1627711922867870041",
+          "name": "id"
+        },
+        {
+          "id": "2:1311370489514433524",
+          "name": "shoparea_no"
+        },
+        {
+          "id": "3:6039360378292837167",
+          "name": "shoparea_name"
+        },
+        {
+          "id": "4:1084251927317358462",
+          "name": "lefttop_longitude"
+        },
+        {
+          "id": "5:2893217613104143722",
+          "name": "lefttop_latitude"
+        },
+        {
+          "id": "6:2035267217931347132",
+          "name": "leftbotton_longitude"
+        },
+        {
+          "id": "7:8099902123184313493",
+          "name": "leftbotton_latitude"
+        },
+        {
+          "id": "8:5930912986040410717",
+          "name": "righttop_longitude"
+        },
+        {
+          "id": "9:2526533334906875803",
+          "name": "righttop_latitude"
+        },
+        {
+          "id": "10:8571521973510440370",
+          "name": "rightbotton_longitude"
+        },
+        {
+          "id": "11:4862997340240692169",
+          "name": "rightbotton_latitude"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:3648464332150574989",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
